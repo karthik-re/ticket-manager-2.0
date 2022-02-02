@@ -4,7 +4,7 @@ const USER_URL = process.env.USER_URL;
 exports.getUser = async (token)=>{
     const res = await fetch(`${USER_URL}/users/me`,{
         method: "GET",
-        header: {
+        headers: {
             Authorization: token
         }
     });
